@@ -100,6 +100,9 @@ module PdfForms
       if option_or_global(:flatten, local_options)
         opt_args << 'flatten'
       end
+      if option_or_global(:drop_xfa, local_options)
+        opt_args << 'drop_xfa'
+      end
       if option_or_global(:encrypt, local_options)
         encrypt_pass = option_or_global(:encrypt_password, local_options)
         encrypt_pass ||= option_or_global(:tmp_path, local_options)
